@@ -1,33 +1,22 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
 
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Text } from '@/components/ui/text';
 import { strings } from '@/constants/strings';
 
 export default function ExploreScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>{strings.bn.explore.title}</Text>
-      <Text style={styles.subtitle}>{strings.bn.explore.subtitle}</Text>
+    <View className="flex-1 items-center justify-center bg-background p-6">
+      <Card className="w-full max-w-md border-border bg-card">
+        <CardHeader>
+          <CardTitle className="text-center text-2xl text-card-foreground">
+            {strings.bn.explore.title}
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Text className="text-center text-muted-foreground">{strings.bn.explore.subtitle}</Text>
+        </CardContent>
+      </Card>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    backgroundColor: '#fffaf4',
-    flex: 1,
-    justifyContent: 'center',
-    padding: 24,
-  },
-  title: {
-    color: '#2f2118',
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-  subtitle: {
-    color: '#6f625b',
-    fontSize: 16,
-    marginTop: 8,
-    textAlign: 'center',
-  },
-});
