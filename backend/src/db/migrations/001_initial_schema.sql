@@ -77,3 +77,11 @@ VALUES
 ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   name_bn = EXCLUDED.name_bn;
+
+INSERT INTO admin_users (email, password_hash, role)
+VALUES (
+  'admin@khusbooo.com',
+  '$2b$10$HtQpm4RrGJQE3kozTgo02eNAoec8wQcPz.wJ039gP99Vc7CpdxN2C',
+  'super_admin'
+)
+ON CONFLICT (email) DO NOTHING;
