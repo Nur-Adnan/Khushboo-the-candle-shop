@@ -19,10 +19,13 @@
     "express-rate-limit": "latest",
     "helmet": "latest",
     "jsonwebtoken": "latest",
-    "pg": "latest"
+    "pg": "latest",
+    "pino": "^10.3.1",
+    "pino-http": "^11.0.0"
   },
   "devDependencies": {
     "@types/bcrypt": "latest",
+    "@types/cors": "^2.8.19",
     "@types/express": "latest",
     "@types/jsonwebtoken": "latest",
     "@types/node": "latest",
